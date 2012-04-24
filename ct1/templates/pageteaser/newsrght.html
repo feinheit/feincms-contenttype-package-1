@@ -1,0 +1,11 @@
+{% load feinheit_thumbnail %}
+<div class="content-newsteaser clearfix">
+    <div class="content-newsteaser-text rightside left">
+        <h2><a href="{{ content.link }}">{{ content.parent.title }}</a></h2>
+        {{ content.text|safe }}
+        <p><a class="content-newsteaser-link" href="{{ content.link }}">mehr</a></p>
+    </div>
+    <div class="content-newsteaser-image rightside left">
+         <img class="framed crooked" src="{{ content.mediafile.file.name|cropscale:'146x151' }}" alt="{{ content.mediafile.translation.caption }}" />
+    </div>
+</div>

@@ -1,0 +1,8 @@
+{% load feincms_tags %}
+<div class="children-teaser">
+{% for page in children %}
+    {% feincms_render_region page 'teaser' request %}
+{% empty %}
+    Keine Unterseiten
+{% endfor %}
+</div>
