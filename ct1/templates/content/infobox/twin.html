@@ -1,0 +1,37 @@
+{% load thumbnail %}
+<div class="row prepend-top">
+  <div class="span12 graybox">
+    <div class="row-fluid">
+      <div class="twin clearfix">
+          <div class="padding">
+            {% if content.url1 %}<a target="_blank" href="{{ content.url1 }}">{% endif %}
+            {% thumbnail content.image1.file "385" as im %}
+            <img src="{{ im.url }}" />
+            {% endthumbnail %}
+            {% if content.url1 %}</a>{% endif %}
+            <div>
+                {% if content.title1 %}<h3>
+                {% if content.url1 %}<a target="_blank" href="{{ content.url1 }}">{{ content.title1 }}</a>
+                {% else %}{{ content.title1 }}{% endif %}
+                </h3>{% endif %}
+                <p>{{ content.text1 }}</p>
+            </div>
+          </div>
+          <div class="padding">
+              {% if content.url2 %}<a target="_blank" href="{{ content.url2 }}">{% endif %}
+              {% thumbnail content.image2.file "385" as im %}
+              <img src="{{ im.url }}" />
+              {% endthumbnail %}
+              {% if content.url2 %}</a>{% endif %}
+            <div>
+                {% if content.title1 and content.title2 %}<h3>
+                {% if content.url2 %}<a target="_blank" href="{{ content.url2 }}">{{ content.title2 }}</a>
+                {% else %}{{ content.title2 }}{% endif %}
+                </h3>{% endif %}
+                <p>{{ content.text2 }}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

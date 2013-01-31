@@ -1,0 +1,51 @@
+{% load thumbnail %}
+<div class="row prepend-top">
+  <div class="span12 graybox">
+    <div class="row-fluid">
+      <div class="triplet clearfix">
+          <div class="padding">
+            {% if content.url1 %}<a target="_blank" href="{{ content.url1 }}">{% endif %}
+            {% thumbnail content.image1.file "245" as im %}
+            <img src="{{ im.url }}" />
+            {% endthumbnail %}
+            {% if content.url1 %}</a>{% endif %}
+            <div>
+                {% if content.title1 %}<h3>
+                {% if content.url1 %}<a target="_blank" href="{{ content.url1 }}">{{ content.title1 }}</a>
+                {% else %}{{ content.title1 }}{% endif %}
+                </h3>{% endif %}
+                <p>{{ content.text1 }}</p>
+            </div>
+          </div>
+          <div class="padding">
+              {% if content.url2 %}<a target="_blank" href="{{ content.url2 }}">{% endif %}
+              {% thumbnail content.image2.file "245" as im %}
+              <img src="{{ im.url }}" />
+              {% endthumbnail %}
+              {% if content.url2 %}</a>{% endif %}
+            <div>
+                {% if content.title1 and content.title2 %}<h3>
+                {% if content.url2 %}<a target="_blank" href="{{ content.url2 }}">{{ content.title2 }}</a>
+                {% else %}{{ content.title2 }}{% endif %}
+                </h3>{% endif %}
+                <p>{{ content.text2 }}</p>
+            </div>
+          </div>
+          <div class="padding">
+              {% if content.url3 %}<a target="_blank" href="{{ content.url3 }}">{% endif %}
+              {% thumbnail content.image3.file "245" as im %}
+              <img src="{{ im.url }}" />
+              {% endthumbnail %}
+              {% if content.url3 %}</a>{% endif %}
+            <div>
+                {% if content.title1 and content.title3 %}<h3>
+                {% if content.url3 %}<a target="_blank" href="{{ content.url3 }}">{{ content.title3 }}</a>
+                {% else %}{{ content.title3 }}{% endif %}
+                </h3>{% endif %}
+              <p>{{ content.text3 }}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

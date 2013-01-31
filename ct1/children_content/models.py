@@ -1,4 +1,7 @@
 from django.db import models
+from django.template import RequestContext
+from django.template.loader import render_to_string
+from feincms.module.page.models import Page
 
 
 class ChildrenContent(models.Model):

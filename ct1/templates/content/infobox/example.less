@@ -1,0 +1,25 @@
+.graybox {
+  background: @grayBrighter;
+  img { width: 100%; }
+  color: @black;
+  h3 { color: @black; }
+}
+.triplet > .padding {
+  width: 31.3%;
+  margin: 1%;
+  float: left;
+}
+.twin > .padding {
+  width: 47%;
+  margin: 1.5%;
+  float: left;
+}
+.triplet { margin: 1%; }
+.twin { margin: 1.5%; }
+
+@media (max-width: 500px){
+  .twin > .padding, .triplet > .padding {
+     width: 98%;
+     margin: 1%;
+   }
+}
